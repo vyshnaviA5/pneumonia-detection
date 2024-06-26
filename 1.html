@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sticky Navigation Bar | Pneumonia Detection</title>
+  <style>
+    /* Google Font Import Link */
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    nav {
+      position: fixed;
+      background-color: whitesmoke;
+      font-weight: 500;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 20px;
+      transition: all 0.4s ease;
+      z-index: 1000;
+    }
+
+    nav.sticky {
+      background: #4070f4;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .nav-content {
+      height: 100%;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav .logo a {
+      font-weight: 500;
+      font-size: 30px;
+      color: black;
+    }
+
+    nav.sticky .logo a {
+      color: black;
+    }
+
+    .nav-content .nav-links {
+      display: flex;
+    }
+
+    .nav-content .nav-links li {
+      list-style: none;
+      margin: 0 8px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 10px 8px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      background-color: black;
+      color: aliceblue;
+      border-radius: 8px;
+    }
+
+    nav.sticky .nav-links li a {
+      color: #fff;
+      transition: all 0.4s ease;
+    }
+
+    nav.sticky .nav-links li a:hover {
+      color: whitesmoke;
+    }
+
+    .home {
+      margin-top: 80px;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 6px;
+      color: #4070f4;
+    }
+
+    .text {
+      text-align: justify;
+      padding: 40px 80px;
+      box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-title {
+      font-size: 28px;
+      color: #4070f4;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .symptoms-list li,
+    .precautions-list li,
+    .treatment-list li {
+      margin-bottom: 15px;
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.5;
+      transition: all 0.3s ease;
+    }
+
+    .symptoms-list li span,
+    .precautions-list li span,
+    .treatment-list li span {
+      font-weight: bold;
+      color: #4070f4;
+    }
+
+    .symptoms-list li:hover,
+    .precautions-list li:hover,
+    .treatment-list li:hover {
+      background-color: #f4f4f4;
+      border-left: 3px solid #4070f4;
+      padding-left: 17px;
+    }
+
+    footer {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <div class="logo">
+        <a href="#">PNEUMONIA Detection Through Chest-X-Ray</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/index1"><b>Home</b></a></li>
+        <li><a href="/login"><b>Login</b></a></li>
+        <li><a href="/register"><b>Register</b></a></li>
+        <li><a href="#" onclick="scrollToClass('text')"><b>Precautions</b></a></li>
+        <li><a href="/testing"><b>Testing</b></a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="home">
+    <img src="https://images.squarespace-cdn.com/content/v1/5a7a09591f318d0b3c459fd8/1611358151287-PY4C2AN5WWO6F547D6OT/Pathogens-causing-pneumonia_180607_04.jpg" width="100%" alt="pic">
+  </section>
+  <div class="text">
+    <div class="section">
+      <h2 class="section-title">Symptoms of Pneumonia</h2>
+      <ul class="symptoms-list">
+        <li><span>Coughing:</span> Often producing phlegm (mucus)</li>
+        <li><span>Fever:</span> Sweating, shaking chills</li>
+        <li><span>Shortness of breath</span></li>
+        <li><span>Chest pain:</span> Worse when breathing or coughing</li>
+        <li><span>Loss of appetite</span></li>
+        <li><span>Fatigue and weakness</span></li>
+        <li><span>Confusion:</span> Especially in older adults</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Precautions to Prevent Pneumonia</h2>
+      <ul class="precautions-list">
+        <li><span>Get vaccinated:</span> Vaccines are available to prevent some types of pneumonia, including the pneumococcal vaccine and the flu vaccine.</li>
+        <li><span>Practice good hand hygiene:</span> Wash your hands regularly with soap and water for at least 20 seconds, especially before eating or touching your face.</li>
+        <li><span>Avoid smoking and secondhand smoke:</span> Smoking damages the lungs and increases the risk of respiratory infections, including pneumonia.</li>
+        <li><span>Stay healthy:</span> Eat a balanced diet, exercise regularly, get enough sleep, and manage stress to support a healthy immune system.</li>
+        <li><span>Avoid close contact with sick individuals:</span> If someone you know has symptoms of a respiratory infection, try to avoid close contact until they recover.</li>
+        <li><span>Clean and disinfect frequently-touched surfaces:</span> Regularly clean and disinfect surfaces like doorknobs, light switches, and electronic devices to prevent the spread of germs.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Treatment of Pneumonia</h2>
+      <ul class="treatment-list">
+        <li><span>Antibiotics:</span> If your pneumonia is bacterial, antibiotics can help fight the infection.</li>
+        <li><span>Antiviral medications:</span> For viral pneumonia, antiviral drugs may be prescribed.</li>
+        <li><span>Fever reducers and pain relievers:</span> Over-the-counter medications like acetaminophen or ibuprofen can help reduce fever and alleviate discomfort.</li>
+        <li><span>Rest and hydration:</span> Get plenty of rest and drink fluids to stay hydrated while your body fights the infection.</li>
+        <li><span>Hospitalization:</span> In severe cases of pneumonia, hospitalization may be necessary, especially for older adults or individuals with underlying health conditions.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Pneumonia Detection. All rights reserved.</p>
+  </footer>
+
+  <script>
+      function scrollToClass(className) {
+            const element = document.querySelector('.' + className);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    let nav = document.querySelector("nav");
+    window.onscroll = function() {
+      if(document.documentElement.scrollTop > 20){
+        nav.classList.add("sticky");
+      } else {
+        nav.classList.remove("sticky");
+      }
+    }
+  </script>
+</body>
+</html>
