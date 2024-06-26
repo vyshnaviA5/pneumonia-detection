@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Register Form Design | CodeLab</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <div class="logo">
+        <a href="#">PNEUMONIA Detection Through Chest-X-Ray</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/index1"><b>Home</b></a></li>
+        <li><a href="/login"><b>Login</b></a></li>
+        <li><a href="/register"><b>Register</b></a></li>
+        <li><a href="/testing"><b>Testing</b></a></li>
+      </ul>
+    </div>
+  </nav>
+      <div class="wrapper">
+         <div class="title">
+            Sign Up 
+         </div>
+         <form method="post" enctype="multipart/form-data" action="/reg">
+            <div class="field">
+               <input type="text" id="email" name="email" required>
+               <label for="email">Email Address</label>
+            </div>
+            <div class="field">
+              <input type="text" id="name" name="name" required>
+              <label for="name">Name</label>
+           </div>
+            <div class="field">
+               <input type="password" id="password" name="password" required>
+               <label for="password">Password</label>
+            </div>
+            <div class="field">
+              <input type="password"  id="confirmpassword" name="confirmpassword">
+              <label for="confirmpassword">Confirm Password</label>
+           </div>
+            <div class="field">
+               <input type="submit" value="Register">
+            </div>
+            <div class="signup-link">
+               Already a member? <a href="/login">Login</a>
+            </div>
+         </form>
+      </div>
+   </body>
+   <script>
+    function scrollToClass(className) {
+        const element = document.querySelector('.' + className);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+</script>
+</html>
